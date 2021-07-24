@@ -59,17 +59,6 @@ class Basepage:
             logging.exception("********input text fail********")
             raise
 
-
-    def get_element_exists(self, loc, img_name):
-        """check the element is exists or not"""
-        try:
-            WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(loc))
-            self.loger.getlog("********{}exists***********".format(loc))
-        except:
-            self.getScreenShot(img_name)
-            logging.exception("******{}element not exists********".format(loc))
-            raise
-
     def getScreenShot(self,img_name):
         """the failure screenshot saved to this path:/Output/screenshots
         """
