@@ -20,7 +20,7 @@ class TestTradeProcessCRO(unittest.TestCase):
     def test_buy_CRO(self):
 
         TradeProcessForCRO(self.driver).buy_CRO()
-
+        time.sleep(5)
 
     def test_sell_CRO(self):
         TradeProcessForCRO(self.driver).sell_CRO()
